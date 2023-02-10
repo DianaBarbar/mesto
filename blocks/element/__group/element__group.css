@@ -1,0 +1,14 @@
+.element__group {
+  display: flex;
+  justify-content: space-between;
+  max-width: 246px;
+  margin: 20px 0 0 18px;
+}
+
+@media screen and (max-width: 890px) {
+  .element__group {
+    margin: 20px auto;
+    padding: 10px;
+  }
+}
+

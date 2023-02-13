@@ -1,9 +1,32 @@
 .popup__name {
   color: black;
-  width: 100%;
-  margin-bottom: 57px;
+  width: 358px;
+  margin: 0 36px 37px;
   border: 0px solid transparent;
-  border-bottom: 1px solid;
-  opacity: 0.2;
-
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+padding-bottom: 13px;
 }
+
+.popup__name:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 803px) {
+  .popup__name {
+    width: 348px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .popup__name {
+    width: 238px;
+  }
+}
+
+

@@ -1,4 +1,6 @@
 .element__like {
+  border: none;
+  background: none;
   transition: opacity .3s ease-in;
 }
 

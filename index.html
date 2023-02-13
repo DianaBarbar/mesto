@@ -15,56 +15,58 @@
   <main>    
   <section class="profile">
     <div class="profile__user">
-      <img src="images/ZHakIvKusto1590x367.jpg" alt="Жак-Ив Кусто" class="profile__avatar">
-      <div class="profile__info">
-        <h1 class="profile__title">Жак-Ив Кусто<span class="profile__edit-button"><img src="images/Edit Button.svg" alt="Кнопка правки"></span></h1>
-        <p class="profile__subtitle">Исследователь океана</p>
+      <img src="images/ZHakIvKusto1590x367.jpg" alt="Аватарка" class="profile__avatar">
+      <div class="profile-info">
+        <div class="profile-info__container">
+          <h1 class="profile-info__title">Жак-Ив Кусто</h1>
+          <button class="profile-info__edit-button" type="button"></button>
+        </div>
+        <p class="profile-info__subtitle">Исследователь океана</p>
       </div>
     </div>
-    <button class="profile__add-button"><img src="images/Vector.png" alt="Кнопка добавления"></button>
-      <!--<img class="profile__add-button" src="images/Add Button.svg" alt="Кнопка добавления"> -->   
+    <button class="profile__add-button" type="button"></button>  
   </section>
   <section class="elements">
     <div class="element">
       <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="element__image">
       <div class="element__group">
         <h2 class="element__title">Карачаевск</h2>
-        <img src="images/Group.svg" alt="Лайк" class="element__like">
+        <button class="element__like" type="button"><img src="images/Group.svg" alt="Лайк"></button>
       </div>  
     </div>
     <div class="element">
       <img src="images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус" class="element__image">
       <div class="element__group">
         <h2 class="element__title">Гора Эльбрус</h2>
-        <img src="images/Group.svg" alt="Лайк" class="element__like">
+        <button class="element__like" type="button"><img src="images/Group.svg" alt="Лайк"></button>
       </div>  
     </div>
     <div class="element">
       <img src="images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="element__image">
       <div class="element__group">
         <h2 class="element__title">Домбай</h2>
-        <img src="images/Group.svg" alt="Лайк" class="element__like">
+        <button class="element__like" type="button"><img src="images/Group.svg" alt="Лайк"></button>
       </div>  
     </div>
     <div class="element">
       <img src="images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус" class="element__image">
       <div class="element__group">
         <h2 class="element__title">Гора Эльбрус</h2>
-        <img src="images/Group.svg" alt="Лайк" class="element__like">
+        <button class="element__like" type="button"></button><img src="images/Group.svg" alt="Лайк"></button>
       </div>  
     </div>
     <div class="element">
       <img src="images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="element__image">
       <div class="element__group">
         <h2 class="element__title">Домбай</h2>
-        <img src="images/Group.svg" alt="Лайк" class="element__like">
+        <button class="element__like" type="button"><img src="images/Group.svg" alt="Лайк"></button>
       </div>  
     </div>
     <div class="element">
       <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкесия" class="element__image">
       <div class="element__group">
         <h2 class="element__title">Карачаево-Черкесия</h2>
-        <img src="images/Group.svg" alt="Лайк" class="element__like">
+        <button class="element__like" type="button"><img src="images/Group.svg" alt="Лайк"></button>
       </div>  
     </div>
   </section>
@@ -72,16 +74,19 @@
   <footer class="footer">
     <img src="images/© 2020 Mesto Russia.png" alt="Место Россия 2020" class="footer__logo">
   </footer>
-  <div class="popup">
-    <form action="#" name="userprofile" class="popup__main-container">
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <input class="popup__name" type="text" name="username" placeholder="Введите имя">
-      <input class="popup__name" type="text" name="useractive" placeholder="Введите специализацию">
-      <input class="button-submit" type="submit" value="Сохранить">
-      <button class="button-close"><img src="images/Close Icon.png" alt="Закрыть"></button> <!--тут будет крестик-->
-    </form>
-    <div class="popup__background"></div>
-      
-    </div>
+  <!--
+      <div class="popup">
+      <div class="popup__main-container">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <button class="button-close" type="button"></button>
+        <form action="#" name="userprofile" class="popup__form">
+          <input class="popup__name" type="text" name="username" value="Жак-Ив Кусто">
+          <input class="popup__name" type="text" name="useractive" value="Исследователь">
+          <button class="button-submit" type="submit" value="Сохранить">Сохранить</button>
+        </form>
+      </div>   
+    </div> 
+  -->
+  
 </body>
 </html>

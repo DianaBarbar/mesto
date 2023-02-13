@@ -1,11 +1,12 @@
 .profile-info__edit-button {
-  background: url('/images/Edit-Button.svg');
-  background-size: cover;
-  border: none;
-    width: 24px;
-    height: 24px;
-    margin-left: 19px;
-    margin-top: 37px;
+  background: url('../../../images/vector-pen.svg');
+  border: 1px solid #FFFFFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-left: 19px;
+  margin-top: 37px;
   cursor: pointer;
   transition: opacity .3s ease-in;
 }
@@ -23,9 +24,9 @@
 
 @media screen and (max-width: 322px) {
   .profile-info__edit-button {
-        top: 280px;
-        right: 38px;
-        width: 18px;
-        height: 18px;
+    top: 280px;
+    right: 38px;
+    width: 18px;
+    height: 18px;
   }
 }

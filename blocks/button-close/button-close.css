@@ -1,5 +1,5 @@
 .button-close {
-  background: url('/images/Close-Icon.svg');
+  background: url('../../images/Close-Icon.svg');
   background-size: cover;
   position: absolute;
   width: 32px;

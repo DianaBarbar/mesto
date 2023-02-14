@@ -32,9 +32,11 @@
 @import url('../blocks/popup/popup.css');
 @import url('../blocks/popup/__form/popup__form.css');
 @import url('../blocks/popup/__main-container/popup__main-container.css');
-@import url('../blocks/popup/__name/popup__name.css');
 @import url('../blocks/popup/__title/popup__title.css');
 @import url('../blocks/popup/_opened/popup_opened.css');
+@import url('../blocks/popup-input/popup-input.css');
+@import url('../blocks/popup-input/__description/popup-input__description.css');
+@import url('../blocks/popup-input/__name/popup-input__name.css');
 
 @import url('../blocks/edit-form/edit-form.css');
 

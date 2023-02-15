@@ -4,8 +4,8 @@ let popupClose = document.querySelector('.button-close');
 let userNameElement = document.querySelector('.profile-info__title');
 let userDescriptionElement = document.querySelector('.profile-info__subtitle');
 let formElement = document.querySelector('.popup__form');
-let inputName = document.querySelector('.popup-input__name'); 
-let inputDescription = document.querySelector('.popup-input__description'); 
+let inputName = document.querySelector('.popup__input_name'); 
+let inputDescription = document.querySelector('.popup__input_description'); 
 let buttonSubmit = document.querySelector('.button-submit');
 
 function showPopup () {

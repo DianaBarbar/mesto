@@ -15,6 +15,9 @@
   .profile {
     margin: 0 auto;
     max-width: 600px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

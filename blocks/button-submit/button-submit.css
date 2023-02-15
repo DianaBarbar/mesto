@@ -5,9 +5,15 @@
   background-color: black;
   font-weight: 400;
   margin: 48px 36px 37px;
-font-size: 18px;
-line-height: 22px;
-border-radius: 2px;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity .3s ease-in;
+}
+
+.button-submit:hover {
+  opacity: .8;
 }
 
 @media screen and (max-width: 804px) {

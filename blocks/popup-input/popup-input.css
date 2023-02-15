@@ -1,14 +1,14 @@
 .popup-input {
   color: black;
-  width: 358px;
+  max-width: 358px;
   margin: 0 36px 37px;
   border: 0px solid transparent;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
-padding-bottom: 13px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding-bottom: 13px;
 }
 
 .popup-input:last-of-type {
@@ -17,15 +17,21 @@ padding-bottom: 13px;
 
 @media screen and (max-width: 803px) {
   .popup-input {
-    width: 348px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    max-width: 348px;
+    margin: 0 21px 0;
   }
 }
 
 @media screen and (max-width: 600px) {
   .popup-input {
-    width: 238px;
+    max-width: 238px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .popup-input {
+    padding-bottom: 7px;
+    margin-bottom: 32px;
   }
 }
 

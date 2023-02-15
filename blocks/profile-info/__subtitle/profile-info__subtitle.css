@@ -6,11 +6,24 @@
   margin: 0;
   padding: 0;
   margin-bottom: 13px;
-  }
+  max-width: 347px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-  @media screen and (max-width: 600px) {
-    .profile-info__subtitle {
-      font-size: 14px;
-      line-height: 17px;
-    }
+@media screen and (max-width: 600px) {
+  .profile-info__subtitle {
+    font-size: 14px;
+    line-height: 17px;
   }
+}
+
+@media screen and (max-width: 400px) {
+  .profile-info__subtitle {
+    max-width: 180px;
+    margin: 0 auto;
+    margin-top: 7px;
+    margin-bottom: 13px;
+  }
+}

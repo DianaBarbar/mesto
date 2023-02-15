@@ -10,5 +10,5 @@
 * Использование псевдоклассов :hover 
 * JavaScript
 ###
-* [Ссылка на работу] ()
+* [Ссылка на работу] (https://dianabarbar.github.io/mesto/index.html)
 

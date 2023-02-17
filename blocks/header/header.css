@@ -10,3 +10,9 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .header {
+    margin: 13px 0 31px 9px;
+  }
+}
+

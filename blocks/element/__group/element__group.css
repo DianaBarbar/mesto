@@ -18,4 +18,10 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .element__group {
+    margin: 21px 20px 0 21px;
+  }
+}
+
 

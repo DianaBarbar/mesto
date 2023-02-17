@@ -6,7 +6,6 @@ let userDescriptionElement = document.querySelector('.profile-info__subtitle');
 let formElement = document.querySelector('.popup__form');
 let inputName = document.querySelector('.popup__input_type_name'); 
 let inputDescription = document.querySelector('.popup__input_type_description'); 
-let buttonSubmit = document.querySelector('.popup__button-submit');
 
 function showPopup () {
   popup.classList.add('popup_opened');

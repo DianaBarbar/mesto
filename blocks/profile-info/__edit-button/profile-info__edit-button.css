@@ -1,6 +1,6 @@
 .profile-info__edit-button {
   background: url('../../../images/vector-pen.svg');
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fff;
   background-position: center;
   background-repeat: no-repeat;
   width: 24px;
@@ -27,6 +27,7 @@
   .profile-info__edit-button {
     width: 20px;
     height: 20px;
+    background-size: 9px;
   }
 }
 
@@ -34,5 +35,6 @@
   .profile-info__edit-button {
     width: 18px;
     height: 18px;
+    background-size: 7.5px;
   }
 }

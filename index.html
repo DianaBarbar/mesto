@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="pages/index.css">
+  <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto</title>
 </head>
 
 <body class="page">
   <header class="header">
     <img src="images/logo.svg" alt="Логотип с названием Место" class="header__logo">
-    <hr class="header__line">
   </header>
   <main>
     <section class="profile">
@@ -29,71 +28,66 @@
       <button class="profile__add-button" type="button"></button>
     </section>
     <section class="elements">
-      <div class="element">
-        <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="element__image">
+      <article class="element">
+        <img src="images/kirill-pershin-1088404-unsplash.png" alt="Карачаевск" class="element__image">
         <div class="element__group">
           <h2 class="element__title">Карачаевск</h2>
-          <button class="element__like element__like_active" type="button"><img src="images/Group.svg"
-              alt="Лайк"></button>
+          <button class="element__like" type="button"></button>
         </div>
-      </div>
-      <div class="element">
+      </article>
+      <article class="element">
         <img src="images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус" class="element__image">
         <div class="element__group">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <button class="element__like element__like_active" type="button"><img src="images/Group.svg"
-              alt="Лайк"></button>
+          <button class="element__like" type="button"></button>
         </div>
-      </div>
-      <div class="element">
+      </article>
+      <article class="element">
         <img src="images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="element__image">
         <div class="element__group">
           <h2 class="element__title">Домбай</h2>
-          <button class="element__like element__like_active" type="button"><img src="images/Group.svg"
-              alt="Лайк"></button>
+          <button class="element__like" type="button"></button>
         </div>
-      </div>
-      <div class="element">
+      </article>
+      <article class="element">
         <img src="images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус" class="element__image">
         <div class="element__group">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <button class="element__like element__like_active" type="button"><img src="images/Group.svg"
-            alt="Лайк"></button>
+          <button class="element__like" type="button"></button>
         </div>
-      </div>
-      <div class="element">
+      </article>
+      <article class="element">
         <img src="images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="element__image">
         <div class="element__group">
           <h2 class="element__title">Домбай</h2>
-          <button class="element__like element__like_active" type="button"><img src="images/Group.svg"
-              alt="Лайк"></button>
+          <button class="element__like" type="button"></button>
         </div>
-      </div>
-      <div class="element">
-        <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкесия" class="element__image">
+      </article>
+      <article class="element">
+        <img src="images/kirill-pershin-1088404-unsplash.png" alt="Карачаево-Черкесия" class="element__image">
         <div class="element__group">
           <h2 class="element__title">Карачаево-Черкесия</h2>
-          <button class="element__like element__like_active" type="button"><img src="images/Group.svg"
-              alt="Лайк"></button>
+          <button class="element__like" type="button"></button>
         </div>
-      </div>
+      </article>
     </section>
   </main>
   <footer class="footer">
-    <img src="images/©-2020-Mesto-Russia.svg" alt="Место Россия 2020" class="footer__logo">
+    <h2 class="footer__title">© 2020 Mesto Russia</h2>
   </footer>
   <div class="popup">
-    <div class="popup__main-container">
+    <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <button class="button-close" type="button"></button>
+      <button class="popup__button-close" type="button"></button>
       <form action="#" name="userprofile" class="popup__form">
-        <input class="popup__input popup__input_name" type="text" name="username">
-        <input class="popup__input popup__input_description" type="text" name="useractive">
-        <button class="button-submit" type="submit" value="Сохранить">Сохранить</button>
+        <input class="popup__input popup__input_type_name" type="text" name="username" placeholder="Имя">
+        <input class="popup__input popup__input_type_description" type="text" name="useractive"
+          placeholder="Спецификация">
+        <button class="popup__button-submit" type="submit" value="Сохранить">Сохранить</button>
       </form>
     </div>
   </div>
-  <script src="script.js/index.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 .elements {
   max-width: 880px;
-  margin: 51px auto 72px;
+  margin: 51px auto 68px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
   column-gap: 17px;

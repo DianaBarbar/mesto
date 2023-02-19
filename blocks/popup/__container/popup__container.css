@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   max-width: 430px;
-  min-height: 330px;
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(0, 0, 0, .15);
   background: #fff;
@@ -21,12 +20,5 @@
   .popup__container {
     max-width: 282px;
     padding: 25px 22px 25px;
-    min-height: 300px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .popup__container {
-    min-height: 322px;
   }
 }

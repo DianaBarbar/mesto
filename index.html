@@ -75,6 +75,7 @@
   <footer class="footer">
     <p class="footer__title">© 2020 Mesto Russia</p>
   </footer>
+  <!--попап для кнопки редактировать-->
   <div class="popup">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
@@ -87,6 +88,20 @@
       </form>
     </div>
   </div>
+  <!--попап для кнопки добавить-->
+  <div class="popup popup_add">
+    <div class="popup__container ">
+      <h2 class="popup__title">Новое место</h2>
+      <button class="popup__button-close popup__button-close_card" type="button"></button>
+      <form name="imageadding" class="popup__form">
+        <input class="popup__input popup__input_type_title" type="text" name="title" placeholder="Название">
+        <input class="popup__input popup__input_type_link-img" type="text" name="link-img"
+          placeholder="Ссылка на картинку">
+        <button class="popup__button-submit" type="submit" value="Сохранить">Создать</button>
+      </form>
+    </div>
+  </div>
+
   <script src="scripts/index.js"></script>
 </body>
 

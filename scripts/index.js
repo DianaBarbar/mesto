@@ -29,9 +29,9 @@ popupClose.addEventListener('click', closePopup);
 formElement.addEventListener('submit', handleFormSubmit);
 
 // начало 5 проектной работы
-let buttonAdd = document.querySelector('.profile__add-button');
-let popupAdd = document.querySelector('.popup_add');
-let buttonCloseCard = document.querySelector('.popup__button-close_card');
+const buttonAdd = document.querySelector('.profile__add-button');
+const popupAdd = document.querySelector('.popup_add');
+const buttonCloseCard = document.querySelector('.popup__button-close_card');
 
 function showPopupAdd () {
   popupAdd.classList.add('popup_opened');
@@ -43,7 +43,7 @@ function closePopupAdd () {
 
 buttonAdd.addEventListener('click', showPopupAdd);
 buttonCloseCard.addEventListener('click', closePopupAdd);
-
+//----------------------------------------------------------
 const initialCards = [
   {
     name: 'Архыз',
@@ -70,5 +70,30 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
+
+const elements = document.querySelector(".elements");
+
+function createCard(cardName, cardLink) {
+  const cardTemplate = document.querySelector("#cardTemplate").content; // находим шаблон и его составляющие
+  const cardElement = cardTemplate.querySelector(".element").cloneNode(true); // клонируем составляющие шаблона
+
+  cardElement.querySelector(".element__title").textContent = cardName;
+
+  const cardImage = cardElement.querySelector(".element__image");
+  cardImage.setAttribute('src', cardLink);
+  cardImage.setAttribute('alt', cardName);
+  return cardElement;
+}
+
+initialCards.forEach((cardValues) => {
+  const card = createCard(cardValues.name, cardValues.link);
+  elements.prepend(card);
+});
+
+
+
+
+
+
 
 

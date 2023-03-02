@@ -7,4 +7,10 @@
   border: none;
   top: 20px;
   right: 20px;
+  transition: opacity .3s ease-in;
+}
+
+.element__remove:hover {
+  opacity: .6;
+  cursor: pointer;
 }

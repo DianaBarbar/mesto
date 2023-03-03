@@ -28,6 +28,7 @@
 
 @media screen and (max-width: 400px) {
   .elements {
+    padding: 0;
     margin: 18px auto;
     gap: 20px;
   }

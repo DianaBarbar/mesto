@@ -1,27 +1,22 @@
 .element__group {
   display: flex;
   justify-content: space-between;
-  margin: 20px 19px 0 22px;
+  margin: 23px 19px 27px 22px;
 }
 
 @media screen and (max-width: 890px) {
   .element__group {
-    margin: 20px auto;
+    margin: 20px 3px 15px 6px;
     padding: 10px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .element__group {
-    margin: 21px 15px 0 21px;
+    margin: 22px 20px 30px 21px;
     padding: 0;
   }
 }
 
-@media screen and (max-width: 350px) {
-  .element__group {
-    margin: 21px 20px 0 21px;
-  }
-}
 
 

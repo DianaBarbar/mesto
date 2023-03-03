@@ -1,33 +1,28 @@
 .elements {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 51px 0 66px;
+  gap: 20px 17px;
+  margin: 0 auto;
   max-width: 880px;
-  margin: 51px auto 68px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-  column-gap: 17px;
-  row-gap: 20px;
-  padding: 0 5px;
 }
 
 @media screen and (max-width: 910px) {
   .elements {
     max-width: 582px;
-    margin-top: 51px;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 721px) {
+@media screen and (max-width: 701px) {
   .elements {
-    max-width: 592px;
-    margin: 44px auto;
-    gap: 15px;
+    padding: 36px 0 48px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .elements {
     max-width: 283px;
-    margin: 36px auto;
-    gap: 22px;
   }
 }
 

@@ -1,6 +1,4 @@
 .popup_type_card {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+
 }
 

@@ -1,9 +1,9 @@
  const profileEdit = document.querySelector('.profile-info__edit-button');
  const popup = document.querySelector('.popup');
- const popupClose = document.querySelectorAll('.popup__button-close');
+ const popupElementsClose = document.querySelectorAll('.popup__button-close');
  const userNameElement = document.querySelector('.profile-info__title');
  const userDescriptionElement = document.querySelector('.profile-info__subtitle');
- const formElement = document.querySelector('.popup__form');
+ const formElement = document.forms.userprofile;
  const inputName = document.querySelector('.popup__input_type_name');
  const inputDescription = document.querySelector('.popup__input_type_description');
  const popupEdit = document.querySelector('.popup_edit');
@@ -16,6 +16,7 @@
  const popupCard = document.querySelector('.popup_type_card');
  const popupCardImage = document.querySelector('.popup__card-image');
  const popupCardCaption = document.querySelector('.popup__card-caption');
+ const cardTemplate = document.querySelector("#cardTemplate").content;
  const initialCards = [
   {
     name: 'Архыз',
@@ -53,7 +54,7 @@
   item.classList.add('popup_opened');
  }
 
- popupClose.forEach(item => {
+ popupElementsClose.forEach(item => {
   item.addEventListener('click', function () {
     const findPopup = item.closest('.popup');
     closePopup(findPopup);
@@ -78,7 +79,6 @@ buttonAdd.addEventListener('click', function () {
 });
 
 function createCard(card) {
-  const cardTemplate = document.querySelector("#cardTemplate").content;
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
   const deleteButton = cardElement.querySelector('.element__remove');
   const elementImage = cardElement.querySelector('.element__image');
@@ -126,6 +126,7 @@ function addCards (card) {
     name:inputTitle.value,
     link:inputLinkImg.value,
   });
+  formCard.reset();
 }
 
 function openPopupImage (card) {

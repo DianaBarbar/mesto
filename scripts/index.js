@@ -44,14 +44,43 @@
   }
 ];
 
- function showPopup () {
+function addPopupListeners (popup) {
+  document.addEventListener('keydown', closeEsc);
+  popup.addEventListener('mousedown', closePopupClick);
+};
+
+function removePopupListeners (popup) {
+  document.removeEventListener('keydown', closeEsc);
+  popup.removeEventListener('mousedown', closePopupClick);
+};
+
+function closeEsc(evt) {
+    if (evt.key === 'Escape') {
+      const popup = document.querySelector('.popup_opened');
+      closePopup(popup);
+    }
+};
+
+ function closePopupClick(evt) {
+  closePopup(evt.target);
+ };
+
+ function showPopupAddCard () {
+  formCard.reset();
+  openPopup(popupAdd);
+  resetMistakes(popupAdd, config);
+ };
+
+ function showPopupEdit () {
    inputName.value = userNameElement.textContent,
    inputDescription.value = userDescriptionElement.textContent,
    openPopup(popupEdit);
+   resetMistakes(popupEdit, config);
  }
 
  function openPopup (item) {
   item.classList.add('popup_opened');
+  addPopupListeners(item);
  }
 
  popupElementsClose.forEach(item => {
@@ -63,6 +92,7 @@
 
  function closePopup (item) {
    item.classList.remove('popup_opened');
+   removePopupListeners(item);
  }
 
  function handleFormSubmit (evt) {
@@ -72,11 +102,9 @@
      closePopup(popupEdit)
  }
 
-profileEdit.addEventListener('click', showPopup);
+profileEdit.addEventListener('click', showPopupEdit);
 formElement.addEventListener('submit', handleFormSubmit);
-buttonAdd.addEventListener('click', function () {
-  openPopup(popupAdd);
-});
+buttonAdd.addEventListener('click', showPopupAddCard);
 
 function createCard(card) {
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
@@ -91,17 +119,17 @@ function createCard(card) {
     openPopupImage(card)
   });
 
-// ------------------------ функция лайка --------------------------------------------------
+//------------------------ функция лайка --------------------------------------------------
 
   cardElement.querySelector('.element__like').addEventListener('click', function(evt) {
     evt.target.classList.toggle('element__like_active');
   })
-// ------------------------ удаление карточки ----------------------------------------------
+//------------------------ удаление карточки ----------------------------------------------
 
   deleteButton.addEventListener('click', handleDeleteButtonClick);
   return cardElement;
 }
-// ------------------------ функция удаления карточки --------------------------------------
+//------------------------ функция удаления карточки --------------------------------------
 
 function handleDeleteButtonClick (event) {
   const button = event.target;
@@ -135,11 +163,3 @@ function openPopupImage (card) {
   popupCardCaption.textContent = card.name,
   openPopup(popupCard);
 }
-
-
-
-
-
-
-
-

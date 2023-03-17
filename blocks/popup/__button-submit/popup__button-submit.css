@@ -7,7 +7,6 @@
   line-height: 22px;
   font-weight: 400;
   text-align: center;
-  width: 358px;
   height: 50px;
   margin-top: 21px;
   padding: 0;
@@ -19,10 +18,10 @@
   background-color: rgba(0, 0, 0, .8);
 }
 
-@media screen and (max-width: 804px) {
+@media screen and (max-width: 800px) {
   .popup__button-submit {
     width: 300px;
-    margin: 45px auto 0;
+    margin: 6px auto 0;
   }
 }
 
@@ -33,6 +32,5 @@
     font-size: 14px;
     line-height: 17px;
     margin: 0;
-    margin-top: 42px;
   }
 }

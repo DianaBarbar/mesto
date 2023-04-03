@@ -1,3 +1,7 @@
+import { Card } from './Card.js';
+import { config, initialCards } from './constants.js';
+import { FormValidator } from './FormValidator.js';
+ 
  const profileEdit = document.querySelector('.profile-info__edit-button');
  const popup = document.querySelector('.popup');
  const popupElementsClose = document.querySelectorAll('.popup__button-close');
@@ -17,32 +21,6 @@
  const popupCardImage = document.querySelector('.popup__card-image');
  const popupCardCaption = document.querySelector('.popup__card-caption');
  const cardTemplate = document.querySelector("#cardTemplate").content;
- const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
 
 function addPopupListeners (popup) {
   document.addEventListener('keydown', closeEsc);
@@ -106,31 +84,6 @@ profileEdit.addEventListener('click', showPopupEdit);
 formElement.addEventListener('submit', handleFormSubmit);
 buttonAdd.addEventListener('click', showPopupAddCard);
 
-function createCard(card) {
-  const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
-  const deleteButton = cardElement.querySelector('.element__remove');
-  const elementImage = cardElement.querySelector('.element__image');
-  cardElement.querySelector(".element__title").textContent = card.name;
-
-  cardElement.querySelector(".element__image").setAttribute('src', card.link);
-  cardElement.querySelector(".element__image").setAttribute('alt', card.name);
-  
-  elementImage.addEventListener('click', function () {
-    openPopupImage(card)
-  });
-
-//------------------------ функция лайка --------------------------------------------------
-
-  cardElement.querySelector('.element__like').addEventListener('click', function(evt) {
-    evt.target.classList.toggle('element__like_active');
-  })
-//------------------------ удаление карточки ----------------------------------------------
-
-  deleteButton.addEventListener('click', handleDeleteButtonClick);
-  return cardElement;
-}
-//------------------------ функция удаления карточки --------------------------------------
-
 function handleDeleteButtonClick (event) {
   const button = event.target;
   const card = button.closest('.element');
@@ -138,7 +91,8 @@ function handleDeleteButtonClick (event) {
 }
 
 function renderCard (item) {
-  elements.prepend(createCard(item));
+  const card = new Card (item, "#cardTemplate")
+  elements.prepend(card.createCard());
 }
 
 initialCards.forEach (cardItems => {

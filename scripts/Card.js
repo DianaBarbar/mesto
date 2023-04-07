@@ -1,8 +1,18 @@
+import { openPopup } from "./utils.js";
 export class Card {
   constructor(data, templateSelector) {
     this._name = data.name;
     this._link = data.link;
     this._templateSelector = templateSelector;
+    this._popup = document.querySelector('.popup_type_card');
+    this._popupImage = document.querySelector('.popup__card-image');
+    this._caption = this._popup.querySelector('.popup__card-caption');
+    this._openPopup = () => {
+      this._caption.textContent = this._name;
+      this._popupImage.src = this._link;
+      this._popupImage.alt = this._name;
+      openPopup(this._popup);
+    }
   }
 
   createCard() {
@@ -32,9 +42,11 @@ export class Card {
     const cardDelete = this._card.querySelector('.element__remove');
     cardDelete.addEventListener('click', () => {
       this._removeCard()});
+    
+    this._image.addEventListener('click', this._openPopup);
   }
-
 }
+
 
 
 

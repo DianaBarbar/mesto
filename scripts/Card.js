@@ -7,12 +7,13 @@ export class Card {
     this._popup = document.querySelector('.popup_type_card');
     this._popupImage = document.querySelector('.popup__card-image');
     this._caption = this._popup.querySelector('.popup__card-caption');
-    this._openPopup = () => {
-      this._caption.textContent = this._name;
-      this._popupImage.src = this._link;
-      this._popupImage.alt = this._name;
-      openPopup(this._popup);
-    }
+  }
+
+  _openPopup = () => {
+    this._caption.textContent = this._name;
+    this._popupImage.src = this._link;
+    this._popupImage.alt = this._name;
+    openPopup(this._popup);
   }
 
   createCard() {
@@ -32,7 +33,8 @@ export class Card {
   }
 
   _removeCard() {
-   this._card.remove()
+   this._card.remove();
+   this._card = null
   }
 
   _setEventListener() {
